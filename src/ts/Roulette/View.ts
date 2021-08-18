@@ -7,7 +7,5 @@ export class RouletteView {
 
   public changePosition(position: number) {
     if (this.elem) this.elem.style.right = position + "px";
-
-    let elems = document.getElementsByClassName("roulette__item");
   }
 }
