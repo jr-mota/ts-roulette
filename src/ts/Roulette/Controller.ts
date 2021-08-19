@@ -26,7 +26,7 @@ class RouletteController {
       this.twistInterval = setInterval(() => {
         this.model.incrementPos();
         this.view.changePosition(this.model.getPosition());
-      }, 1000);
+      }, 1000/60);
     }
   }
 }

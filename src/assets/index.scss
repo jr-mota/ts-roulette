@@ -63,11 +63,13 @@ body {
 
     border-radius: 8px;
 
-    margin-right: 1em;
+    margin-right: 10px;
 
     font-weight: 700;
 
     color: black;
     background-color: lightblue;
+
+    transition: linear 0.3s;
   }
 }
