@@ -1,15 +1,23 @@
+import { RouletteItem } from "./Models/RouletteItem";
+
 export class RouletteModel {
-  private roulettePosition: number;
+  private items: Array<RouletteItem>;
 
   constructor() {
-    this.roulettePosition = 0;
+    this.items = [
+      { id: 1, item: 1 },
+      { id: 2, item: 2 },
+      { id: 3, item: 32 },
+      { id: 4, item: 65 },
+      { id: 5, item: 11 }
+    ]; // fetch("getRouletteItems");
   }
 
-  public incrementPos(): void {
-    this.roulettePosition += 6;
-  }
+  // public incrementPos(): void {
+  //   this.roulettePosition += 6;
+  // }
 
-  public getPosition(): number {
-    return this.roulettePosition;
+  public getItems(): Array<RouletteItem> {
+    return this.items;
   }
 }

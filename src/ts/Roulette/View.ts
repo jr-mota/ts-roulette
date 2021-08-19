@@ -1,3 +1,5 @@
+import { RouletteItem } from "./Models/RouletteItem";
+
 export class RouletteView {
   public elem: HTMLElement | null;
 
@@ -5,7 +7,13 @@ export class RouletteView {
     this.elem = document.getElementById(elemId);
   }
 
-  public changePosition(position: number) {
-    if (this.elem) this.elem.style.right = position + "px";
+  public insertItems(items: Array<RouletteItem>): void {
+    for (const item of items) {
+      const newElem: HTMLElement = document.createElement("div");
+      newElem.innerHTML = item.item.toString();
+      newElem.className = "roulette__item";
+
+      this.elem?.appendChild(newElem);
+    }
   }
 }
