@@ -16,4 +16,8 @@ export class RouletteView {
       this.elem?.appendChild(newElem);
     }
   }
+
+  public changePosition(position: number): void {
+    if (this.elem) this.elem.style.transform = `translateX(-${position}px)`;
+  }
 }

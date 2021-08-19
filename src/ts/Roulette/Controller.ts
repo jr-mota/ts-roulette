@@ -20,7 +20,10 @@ class RouletteController {
     this.btn?.addEventListener("click", this.twistRoulette.bind(this));
   }
 
-  private twistRoulette(e: Event): void {}
+  private twistRoulette(): void {
+    this.model.moveItems();
+    this.view.changePosition(this.model.getPosition());
+  }
 }
 
 export { RouletteController, RouletteModel, RouletteView };

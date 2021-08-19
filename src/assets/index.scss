@@ -23,12 +23,12 @@ body {
   width: 100%;
 
   &__inner {
-    width: 80%;
+    width: 770px;
     height: 100px;
     
     background-color: darkcyan;
 
-    padding: 0.5em;
+    padding: 0.5em 0;
 
     overflow-x: hidden;
 
@@ -39,9 +39,9 @@ body {
   }
 
   &__items {
-    position: relative;
-
     white-space: nowrap;
+
+    transition: transform ease-in-out 2s;
   }
 
   &__btn {
